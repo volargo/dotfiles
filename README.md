@@ -21,22 +21,26 @@ A fast and easy-to-use configuare on the Debian Linux.
 
 |Key                    |Action                             |
 |:----------------------|:----------------------------------|
+|`$Mod+Return`          |Start a terminal|
+|`$Mod+q`               |Kill a focused window|
 |`$Mod+d`               |Application launcher|
 |`$Mod+m`               |Desktop file application launcher|
+|`$Mod+i`               |Start j4-dmenu-desktop|
 |`$Mod+t`               |Select rofi theme|
-|`$Mod+F5`              |Notes|
-|`$Mod+F6`              |Web search|
+|`$Mod+n`               |Notes|
+|`$Mod+g`               |Web search|
 |`$Mod+Tab`             |Window Switcher|
 |`$Mod+Print`           |Screenshots|
 |`$Mod+r`               |Resize application window|
 |`Pause`                |System power controler|
 
-Change i3-wm themes, use `i3-style` do it. Use `i3-style -l` command get more i3-wm themes.
+1. Change i3-wm themes, use `i3-style` do it. Use `i3-style -l` command get more i3-wm themes.
 * For example(select debian theme):
 ```
 $ i3-style debian -o ~/.config/i3/config --reload
 ```
-Modify the power controller can pass the custom i3 configuration file, open ` i3` configuration file and find below code then change keybindings.
+
+2. Use `pause` key to system power contrl. Modify the power controller can pass the custom i3 configuration file, open ` i3` configuration file and find below code then change keybindings.
 ```shell
 mode "$mode_system" {
     bindsym L exec bash -f ~/.config/i3/scripts/lock.sh, exec sleep .1 && exec xset dpms force off, mode "default"
@@ -51,6 +55,32 @@ mode "$mode_system" {
 bindsym Pause mode "$mode_system"
 ```
 
+## Custom keybindings
+If use custom shortcuts, need to open i3-wm configure file, find belows code and redefine shortcuts.
+```shell
+# start a terminal
+bindsym $mod+Return exec terminator
+# kill focused window
+bindsym $mod+q kill
+# all applications
+bindsym $mod+d exec rofi -show run
+# menu applications
+bindsym $mod+m exec rofi -show drun
+# j4-dmenu-desktop
+bindsym $mod+i exec j4-dmenu-desktop
+# switch workspace
+bindsym $mod+Tab exec rofi -show window
+# rofi theme selector
+bindsym $mod+t exec rofi-theme-selector
+# rofi monitor switch
+bindsym $mod+p exec bash ~/.config/rofi/scripts/monitor_layout.sh
+# rofi notes
+bindsym $mod+n exec bash ~/.config/rofi/scripts/rofi-notes.sh
+# rofi web search
+bindsym $mod+g exec bash ~/.config/rofi/scripts/web-search.sh
+# quick screenshot
+bindsym $mod+Print exec deepin-screenshot
+```
 
 ## Install
 1. Clone this repo somewhere and run `install.sh` scripts with `root`.
