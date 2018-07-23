@@ -5,6 +5,7 @@ A fast and easy-to-use configuare on the Linux (Debian/Kali/Ubuntu)
 
 ## Screenshots
 * i3-wm ![i3-wm](screenshots/dotfiles-main.png)
+
 * SpaceVim ![spacevim](screenshots/dotfiles-spacevim.png)
 
 ## Dependencies
