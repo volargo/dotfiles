@@ -31,10 +31,12 @@ A fast and easy-to-use configuare on the Debian Linux.
 |`$Mod+r`               |Resize application window|
 |`Pause`                |System power controler|
 
-More i3-wm themes, use `i3-style` change this. For example(select debian theme):
+Change i3-wm themes, use `i3-style` do it.
+* For example(select debian theme):
 ```
 $ i3-style debian -o ~/.config/i3/config --reload
 ```
+use `i3-style -l` get more i3-wm themes.
 
 Modify the power controller can pass the custom i3 configuration file, open ` i3` configuration file and find below code then change keybindings.
 ```shell
