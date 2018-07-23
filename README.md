@@ -38,7 +38,6 @@ $ i3-style debian -o ~/.config/i3/config --reload
 
 Modify the power controller can pass the custom i3 configuration file, open ` i3` configuration file and find below code then change keybindings.
 ```shell
-set $mode_system System:   L :  | S :  | H :  | P :  | R :  | E :  
 mode "$mode\_system" {
     bindsym L exec bash -f ~/.config/i3/scripts/lock.sh, exec sleep .1 && exec xset dpms force off, mode "default"
     bindsym E exec i3-msg exit
