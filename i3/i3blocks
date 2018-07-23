@@ -1,0 +1,75 @@
+# i3blocks config file
+#
+# Please see man i3blocks for a complete reference!
+# The man page is also hosted at http://vivien.github.io/i3blocks
+separator_block_width=15
+
+# WiFi
+[Ether]
+command=~/.config/i3/scripts/net.sh -w
+interval=10
+
+# Enternet
+[Ether]
+command=~/.config/i3/scripts/net.sh -e
+interval=10
+
+# CPU Temp
+[Temp]
+command=~/.config/i3/scripts/temperature.pr
+interval=60
+
+# CPU usage
+[CPU]
+command=~/.config/i3/scripts/cpu_usage.pr
+interval=5
+
+# Memory usage
+[Ram]
+command=~/.config/i3/scripts/mem.sh -m
+interval=10
+
+# Swap usage
+[Swap]
+command=~/.config/i3/scripts/mem.sh -s
+interval=10
+
+# Disk usage
+[Disk]
+command=~/.config/i3/scripts/disk.sh /
+interval=60
+
+# Volume indicator
+[Vol]
+command=~/.config/i3/scripts/vol.sh
+interval=3
+
+# Battery indicator
+[Bat]
+command=~/.config/i3/scripts/battery.pr
+interval=60
+
+# Date Time
+[Time]
+command=~/.config/i3/scripts/date.sh
+interval=60
+
+# Mocp
+#[Mocp]
+#command=~/.config/i3/scripts/mocp.sh
+#interval=60
+
+# Touchpad
+#[Touchpad]
+#command=~/.config/i3/scripts/touchpad.sh
+#interval=10
+
+# Trash
+[Trash]
+command=~/.config/i3/scripts/trash.sh
+interval=60
+
+# Keybroad
+#[Keybroad]
+#command=~/.config/i3/scripts/keybroad.sh
+#interval=10
