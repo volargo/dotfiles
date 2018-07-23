@@ -31,10 +31,12 @@ bindsym $mod+i exec j4-dmenu-desktop
 bindsym $mod+Tab exec rofi -show window
 # rofi theme selector
 bindsym $mod+t exec rofi-theme-selector
+# rofi monitor switch
+bindsym $mod+p exec bash ~/.config/rofi/scripts/monitor_layout.sh
 # rofi notes
-bindsym $mod+F5 exec bash ~/.config/rofi/scripts/rofi-notes.sh
+bindsym $mod+n exec bash ~/.config/rofi/scripts/rofi-notes.sh
 # rofi web search
-bindsym $mod+F6 exec bash ~/.config/rofi/scripts/web-search.sh
+bindsym $mod+g exec bash ~/.config/rofi/scripts/web-search.sh
 # quick screenshot
 bindsym $mod+Print exec deepin-screenshot
 
