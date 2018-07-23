@@ -34,13 +34,13 @@ A fast and easy-to-use configuare on the Debian Linux.
 |`$Mod+r`               |Resize application window|
 |`Pause`                |System power controler|
 
-* Change i3-wm themes, use `i3-style` do it. Use `i3-style -l` command get more i3-wm themes.
-> For example (select debian theme):
+* Change the dotfiles i3-wm themes must be use `i3-style` do it. Execute `i3-style -l` command get more i3-wm themes.
+> For example (select archlinux theme):
 ```
-$ i3-style debain -o ~/.config/i3/config --reload
+$ i3-style archlinux -o ~/.config/i3/config --reload
 ```
 
-* Use `Pause` key to system power contrl. Modify the power controller can pass the custom i3 configuration file, open ` i3` configuration file and find below code then change keybindings.
+* Use `Pause` key to control system power. If pass the custom system power keybindings, open ` i3` configuration file then find below code and redefine keybindings.
 ```shell
 mode "$mode_system" {
     bindsym L exec bash -f ~/.config/i3/scripts/lock.sh, exec sleep .1 && exec xset dpms force off, mode "default"
