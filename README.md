@@ -1,11 +1,6 @@
 # About
 A fast and easy-to-use configuare on the Linux (Debian/Kali/Ubuntu)
 
-## Screenshots
-* i3-wm ![i3-wm](screenshots/dotfiles-i3wm.png)
-
-* SpaceVim ![spacevim](screenshots/dotfiles-spacevim.png)
-
 ## Dependencies
 * [i3-wm](https://github.com/i3/i3): improved dynamic tiling window manager.
 * [i3-gaps](https://github.com/Airblader/i3): a tiling window manager for Linux.
@@ -14,6 +9,11 @@ A fast and easy-to-use configuare on the Linux (Debian/Kali/Ubuntu)
 * [i3lock-color](https://github.com/PandorasFox/i3lock-color): improved screen locker.
 * [j4-dmenu-desktop](https://github.com/enkore/j4-dmenu-desktop): faster replacement for i3-dmenu-desktop.
 * [rofi](https://github.com/DaveDavenport/rofi): window switcher, run dialog and dmenu replacement.
+
+## Screenshots
+* i3-wm ![i3-wm](screenshots/dotfiles-i3wm.png)
+
+* SpaceVim ![spacevim](screenshots/dotfiles-spacevim.png)
 
 ## Usage
 
