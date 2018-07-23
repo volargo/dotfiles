@@ -37,20 +37,21 @@ A fast and easy-to-use configuare on the Debian Linux.
 $ i3-style debian -o ~/.config/i3/config --reload
 ```
 
-* Modify the power controller can pass the custom i3 configuration file, open ` i3` configuration file and find below code_. Then change keybindings.
-
-    set $mode_system System:   L :  | S :  | H :  | P :  | R :  | E :  
-    mode "$mode\_system" {
-        bindsym L exec bash -f ~/.config/i3/scripts/lock.sh, exec sleep .1 && exec xset dpms force off, mode "default"
-        bindsym E exec i3-msg exit
-        bindsym P exec systemctl poweroff
-        bindsym R exec systemctl reboot
-        bindsym H exec lock && systemctl hibernate
-        bindsym S exec lock && systemctl suspend
-        bindsym Escape mode "default"
-        bindsym Return mode "default"
-    }
-    bindsym Pause mode "$mode\_system"
+* Modify the power controller can pass the custom i3 configuration file, open ` i3` configuration file and find below code then change keybindings.
+```shell
+set $mode_system System:   L :  | S :  | H :  | P :  | R :  | E :  
+mode "$mode\_system" {
+    bindsym L exec bash -f ~/.config/i3/scripts/lock.sh, exec sleep .1 && exec xset dpms force off, mode "default"
+    bindsym E exec i3-msg exit
+    bindsym P exec systemctl poweroff
+    bindsym R exec systemctl reboot
+    bindsym H exec lock && systemctl hibernate
+    bindsym S exec lock && systemctl suspend
+    bindsym Escape mode "default"
+    bindsym Return mode "default"
+}
+bindsym Pause mode "$mode\_system"
+```
 
 
 ## Install
