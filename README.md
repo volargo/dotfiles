@@ -1,8 +1,6 @@
 # About
 A fast and easy-to-use configuare on the Linux (Debian/Kali/Ubuntu)
 
-## Features
-
 ## Screenshots
 * i3-wm ![i3-wm](screenshots/dotfiles-i3wm.png)
 
@@ -17,11 +15,13 @@ A fast and easy-to-use configuare on the Linux (Debian/Kali/Ubuntu)
 * [j4-dmenu-desktop](https://github.com/enkore/j4-dmenu-desktop): faster replacement for i3-dmenu-desktop.
 * [rofi](https://github.com/DaveDavenport/rofi): window switcher, run dialog and dmenu replacement.
 
+## Usage
+
 ## Install
 1. Clone this repo somewhere and run `install.sh` scripts with `root`.
 ```Shell
-$ git clone git@github.com:volargo/dotfiles.git ~/dotfiles && cd ~/dotfiles
+$ git clone git@github.com:volargo/dotfiles.git ~/dotfiles
+$ cd ~/dotfiles
 $ chmod +x install.sh
-$ sudo ./install.sh
+$ ./install.sh
 ```
-## How to use
