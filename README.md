@@ -6,6 +6,7 @@ A fast and easy-to-use configuare on the Linux (Kali Debain Ubuntu Mint Aliyun-L
 ## Screenshots
 * workspace1 ![i3-wm](screenshots/dotfiles-main.png)
 * workspace2 ![chrmium](screenshots/dotfiles-chromium.png)
+* workspace3 ![spacevim](screenshots/dotfiles-spacevim.png)
 
 ## Dependencies
 * [i3-wm](https://github.com/i3/i3): improved dynamic tiling window manager(i3 window manager, screen locker, menu, statusbar).
