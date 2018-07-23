@@ -1,5 +1,5 @@
 # About
-A fast and easy-to-use configuare on the Linux (Debian/Kali/Ubuntu)
+A fast and easy-to-use configuare on the Debian Linux.
 
 ## Dependencies
 * [i3-wm](https://github.com/i3/i3): improved dynamic tiling window manager.
@@ -16,17 +16,40 @@ A fast and easy-to-use configuare on the Linux (Debian/Kali/Ubuntu)
 
 * SpaceVim ![spacevim](screenshots/dotfiles-spacevim.png)
 
-## Keybindings
-
+## Usage
+* Keybindings
 |Key                    |Action                             |
 |:----------------------|:----------------------------------|
-|`$Mod+d`               |Application launcher.|
-|`$Mod+m`               |Desktop File Application launcher.|
-|`$Mod+t`               |select rofi theme.|
-|`$Mod+F5`              |Notes.|
-|`$Mod+F6`              |Web search.|
-|`$Mod+Tab`             |Window Switcher.|
-|`$Mod+Print`           |Screenshots.|
+|`$Mod+d`               |Application launcher|
+|`$Mod+m`               |Desktop file application launcher|
+|`$Mod+t`               |Select rofi theme|
+|`$Mod+F5`              |Notes|
+|`$Mod+F6`              |Web search|
+|`$Mod+Tab`             |Window Switcher|
+|`$Mod+Print`           |Screenshots|
+|`$Mod+r`               |Resize application window|
+|`Pause`                |System power controler|
+
+* More i3-wm themes, use `i3-style` change this. For example(select debian theme):
+```
+$ i3-style debian -o ~/.config/i3/config --reload
+```
+
+* Modify the power controller can pass the custom i3 configuration file, open ` i3` configuration file and find below code_. Then change keybindings.
+
+    set $mode_system System:   L :  | S :  | H :  | P :  | R :  | E :  
+    mode "$mode\_system" {
+        bindsym L exec bash -f ~/.config/i3/scripts/lock.sh, exec sleep .1 && exec xset dpms force off, mode "default"
+        bindsym E exec i3-msg exit
+        bindsym P exec systemctl poweroff
+        bindsym R exec systemctl reboot
+        bindsym H exec lock && systemctl hibernate
+        bindsym S exec lock && systemctl suspend
+        bindsym Escape mode "default"
+        bindsym Return mode "default"
+    }
+    bindsym Pause mode "$mode\_system"
+
 
 ## Install
 1. Clone this repo somewhere and run `install.sh` scripts with `root`.
