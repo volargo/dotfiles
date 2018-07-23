@@ -4,11 +4,9 @@ A fast and easy-to-use configuare on the Linux (Debian/Kali/Ubuntu)
 ## Features
 
 ## Screenshots
-* i3-wm
-![i3-wm](screenshots/dotfiles-main.png)
+* i3-wm ![i3-wm](screenshots/dotfiles-i3wm.png)
 
-* SpaceVim
-![spacevim](screenshots/dotfiles-spacevim.png)
+* SpaceVim ![spacevim](screenshots/dotfiles-spacevim.png)
 
 ## Dependencies
 * [i3-wm](https://github.com/i3/i3): improved dynamic tiling window manager.
