@@ -9,6 +9,7 @@ A fast and easy-to-use configuare on the Linux (Debian/Kali/Ubuntu)
 * [i3lock-color](https://github.com/PandorasFox/i3lock-color): improved screen locker.
 * [j4-dmenu-desktop](https://github.com/enkore/j4-dmenu-desktop): faster replacement for i3-dmenu-desktop.
 * [rofi](https://github.com/DaveDavenport/rofi): window switcher, run dialog and dmenu replacement.
+* [deepin-screenshot](https://github.com/linuxdeepin/deepin-screenshot): screenshots application.
 
 ## Screenshots
 * i3-wm ![i3-wm](screenshots/dotfiles-i3wm.png)
@@ -16,6 +17,13 @@ A fast and easy-to-use configuare on the Linux (Debian/Kali/Ubuntu)
 * SpaceVim ![spacevim](screenshots/dotfiles-spacevim.png)
 
 ## Usage
+--$Mod+d--: application launcher
+--$Mod+m--: desktop File Application launcher.
+--$Mod+t--: rofi theme selector.
+--$Mod+F5--: notes.
+--$Mod+F6--: web search.
+--$Mod+Tab--: window Switcher.
+--$Mod+Print--: screenshots.
 
 ## Install
 1. Clone this repo somewhere and run `install.sh` scripts with `root`.
