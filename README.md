@@ -38,7 +38,7 @@ $ i3-style debian -o ~/.config/i3/config --reload
 
 Modify the power controller can pass the custom i3 configuration file, open ` i3` configuration file and find below code then change keybindings.
 ```shell
-mode "$mode\_system" {
+mode "$mode_system" {
     bindsym L exec bash -f ~/.config/i3/scripts/lock.sh, exec sleep .1 && exec xset dpms force off, mode "default"
     bindsym E exec i3-msg exit
     bindsym P exec systemctl poweroff
@@ -48,7 +48,7 @@ mode "$mode\_system" {
     bindsym Escape mode "default"
     bindsym Return mode "default"
 }
-bindsym Pause mode "$mode\_system"
+bindsym Pause mode "$mode_system"
 ```
 
 
