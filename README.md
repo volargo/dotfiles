@@ -17,15 +17,16 @@ A fast and easy-to-use configuare on the Linux (Debian/Kali/Ubuntu)
 * SpaceVim ![spacevim](screenshots/dotfiles-spacevim.png)
 
 ## Keybindings
-|Key        |Action                             |
-|-----------|-----------------------------------|
-|$Mod+d     |Application launcher.              |
-|$Mod+m     |Desktop File Application launcher. |
-|$Mod+t     |select rofi theme.                 |
-|$Mod+F5    |Notes.                             |
-|$Mod+F6    |Web search.                        |
-|$Mod+Tab   |Window Switcher.                   |
-|$Mod+Print |Screenshots.                       |
+
+|Key                    |Action                             |
+|:----------------------|:----------------------------------|
+|`$Mod+d`               |Application launcher.|
+|`$Mod+m`               |Desktop File Application launcher.|
+|`$Mod+t`               |select rofi theme.|
+|`$Mod+F5`              |Notes.|
+|`$Mod+F6`              |Web search.|
+|`$Mod+Tab`             |Window Switcher.|
+|`$Mod+Print`           |Screenshots.|
 
 ## Install
 1. Clone this repo somewhere and run `install.sh` scripts with `root`.
