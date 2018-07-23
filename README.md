@@ -18,6 +18,7 @@ A fast and easy-to-use configuare on the Debian Linux.
 
 ## Usage
 * Keybindings
+
 |Key                    |Action                             |
 |:----------------------|:----------------------------------|
 |`$Mod+d`               |Application launcher|
@@ -29,6 +30,7 @@ A fast and easy-to-use configuare on the Debian Linux.
 |`$Mod+Print`           |Screenshots|
 |`$Mod+r`               |Resize application window|
 |`Pause`                |System power controler|
+
 
 * More i3-wm themes, use `i3-style` change this. For example(select debian theme):
 ```
