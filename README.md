@@ -1,5 +1,5 @@
 # About
-A fast and easy-to-use configuare on the Linux (Kali Debain Ubuntu Mint Aliyun-Linux Amzon-Linux Redhat Deepin)
+A fast and easy-to-use configuare on the Linux (Debian/Kali/Ubuntu)
 
 ## Features
 
