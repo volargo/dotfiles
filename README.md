@@ -17,7 +17,7 @@ A fast and easy-to-use configuare on the Debian Linux.
 * SpaceVim ![spacevim](screenshots/dotfiles-spacevim.png)
 
 ## Usage
-* Keybindings
+**Keybindings**
 
 |Key                    |Action                             |
 |:----------------------|:----------------------------------|
@@ -31,13 +31,12 @@ A fast and easy-to-use configuare on the Debian Linux.
 |`$Mod+r`               |Resize application window|
 |`Pause`                |System power controler|
 
-
-* More i3-wm themes, use `i3-style` change this. For example(select debian theme):
+More i3-wm themes, use `i3-style` change this. For example(select debian theme):
 ```
 $ i3-style debian -o ~/.config/i3/config --reload
 ```
 
-* Modify the power controller can pass the custom i3 configuration file, open ` i3` configuration file and find below code then change keybindings.
+Modify the power controller can pass the custom i3 configuration file, open ` i3` configuration file and find below code then change keybindings.
 ```shell
 set $mode_system System:   L :  | S :  | H :  | P :  | R :  | E :  
 mode "$mode\_system" {
