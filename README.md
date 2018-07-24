@@ -41,7 +41,7 @@ $ i3-style archlinux -o ~/.config/i3/config --reload
 
 * Use `Pause` key to control system power. If pass the custom system power keybindings, open ` i3` configuration file then find belows code and redefine keybindings.
 
-![Power-Controler](screenshots/dotfiles-power-controler.png)
+<center> ![Power-Controler](screenshots/dotfiles-power-controler.png) </center>
 
 ```shell
 mode "$mode_system" {
