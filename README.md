@@ -18,6 +18,7 @@ A fast and easy-to-use configuare on the Debian Linux.
 
 ## Usage
 * **Keybindings**
+
 |Key                    |Action                             |
 |:----------------------|:----------------------------------|
 |`$Mod+Return`          |Start a terminal|
