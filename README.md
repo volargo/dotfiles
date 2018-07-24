@@ -17,8 +17,7 @@ A fast and easy-to-use configuare on the Debian Linux.
 * SpaceVim ![spacevim](screenshots/dotfiles-spacevim.png)
 
 ## Usage
-**Keybindings**
-
+* **Keybindings**
 |Key                    |Action                             |
 |:----------------------|:----------------------------------|
 |`$Mod+Return`          |Start a terminal|
@@ -40,7 +39,10 @@ A fast and easy-to-use configuare on the Debian Linux.
 $ i3-style archlinux -o ~/.config/i3/config --reload
 ```
 
-* Use `Pause` key to control system power. If pass the custom system power keybindings, open ` i3` configuration file then find below code and redefine keybindings.
+* Use `Pause` key to control system power. If pass the custom system power keybindings, open ` i3` configuration file then find belows code and redefine keybindings.
+
+![Power-Controler](screenshots/dotfiles-power-controler.png)
+
 ```shell
 mode "$mode_system" {
     bindsym L exec bash -f ~/.config/i3/scripts/lock.sh, exec sleep .1 && exec xset dpms force off, mode "default"
