@@ -1,4 +1,4 @@
-# About
+## About
 A fast and easy-to-use configuare on the Debian Linux.
 
 ## Dependencies
@@ -27,6 +27,7 @@ A fast and easy-to-use configuare on the Debian Linux.
 |`$Mod+m`               |Desktop file application launcher|
 |`$Mod+i`               |Start j4-dmenu-desktop|
 |`$Mod+t`               |Select rofi theme|
+|`$Mod+p`               |Monitor layouts|
 |`$Mod+n`               |Notes|
 |`$Mod+g`               |Web search|
 |`$Mod+Tab`             |Window Switcher|
