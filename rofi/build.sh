@@ -19,8 +19,12 @@
 
 set -o nounset                                  # Treat unset variables as an error
 
-sudo apt install rofi
+if [ $UID -ne 0 ]; then
+    echo "Permission denied: You must be root run this scripts."
+    exit 1
+else
+    sudo apt install rofi
+fi
 
 mkdir -p ~/.config/rofi
-
 cp -r ./scripts ~/.config/rofi && cp ./config ~/.config/rofi
