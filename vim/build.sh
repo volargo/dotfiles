@@ -19,7 +19,12 @@
 
 set -o nounset                                  # Treat unset variables as an error
 
-sudo apt install vim vim-airline vim-airline-themes vim-gocompleter
+if [ $UID -ne 0 ]; then
+    echo "Permission denied: You must be root run this scripts."
+    exit 1
+else
+    sudo apt install vim vim-airline vim-airline-themes vim-gocompleter vim-fugitive
+fi
 
 # backup vimrc
 cp -r ~/.vim ~/.vim_bk && cp ~/.vimrc ~/.vimrc_bk
