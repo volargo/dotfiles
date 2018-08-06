@@ -19,7 +19,11 @@
 
 set -o nounset                                  # Treat unset variables as an error
 
-sudo apt install zsh wget
-wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -
-
-sed -i "s/robbyrussell/pygmalion/g" ~/.zshrc
+if [ $UID -ne 0 ]; then
+    echo "Permission denied: You must be root run this scripts."
+    exit 1
+else
+    sudo apt install zsh wget
+    sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+    sed -i "s/robbyrussell/pygmalion/g" ~/.zshrc
+fi
