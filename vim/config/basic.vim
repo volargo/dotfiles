@@ -27,7 +27,7 @@ colorscheme molokayo
 " 代码缩进和排版
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set autoindent           " 设置自动缩进
-set fo-=r                " 回车不自动填充注释标识
+set fo-=r                " 回车后行起始处不添加注释符号
 set cindent              " 设置使用C/C++语言的自动缩进方式
 set cinoptions=g0,:0,N-s,(0    " 设置C/C++语言的具体缩进方式
 set smartindent          " 智能的选择对其方式
@@ -63,6 +63,7 @@ set noswapfile          " 禁止生成临时文件
 set autoread            " 文件在vim之外修改过，自动重新读入
 set autowrite           " 设置自动保存
 set confirm             " 在处理未保存或只读文件的时候，弹出确认
+set history=500
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 编码设置

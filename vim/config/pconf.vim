@@ -95,42 +95,40 @@ let g:NERDTreeDirArrowExpandable='▷'
 let g:NERDTreeDirArrowCollapsible='▼'
 
 " YouCompleteMe
-if has('c') || has('cpp')
-    let g:ycm_confirm_extra_conf = 1
-    let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
-    let g:ycm_error_symbol = '✗'
-    let g:ycm_warning_symbol = '✗'
-    let g:ycm_seed_identifiers_with_syntax = 1
-    let g:ycm_complete_in_comments = 1
-    let g:ycm_complete_in_strings = 1
-    let g:ycm_server_python_interpreter = '/usr/bin/python'
-    let g:ycm_python_binary_path = 'python'
-    nnoremap <leader>u :YcmCompleter GoToDeclaration<cr>
-    nnoremap <leader>i :YcmCompleter GoToDefinition<cr>
-    nnoremap <leader>o :YcmCompleter GoToInclude<cr>
-    nnoremap <leader>ff :YcmCompleter FixIt<cr>
-    nmap <F5> :YcmDiags<cr>
-
-    " Ctags
-    set tags+=/usr/include/tags
-    set tags+=~/.vim/systags
-    set tags+=~/.vim/x86_64-linux-gnu-systags
-    let g:ycm_collect_identifiers_from_tags_files = 1
-    let g:ycm_semantic_triggers =  {
-                \   'c' : ['->', '.','re![_a-zA-z0-9]'],
-                \   'objc' : ['->', '.', 're!\[[_a-zA-Z]+\w*\s', 're!^\s*[^\W\d]\w*\s',
-                \             're!\[.*\]\s'],
-                \   'ocaml' : ['.', '#'],
-                \   'cpp,objcpp' : ['->', '.', '::','re![_a-zA-Z0-9]'],
-                \   'perl' : ['->'],
-                \   'php' : ['->', '::'],
-                \   'cs,java,javascript,typescript,d,python,perl6,scala,vb,elixir,go' : ['.'],
-                \   'ruby' : ['.', '::'],
-                \   'lua' : ['.', ':'],
-                \   'erlang' : [':'],
-                \ }
-    let g:ycm_semantic_triggers.c = ['->', '.', ' ', '(', '[', '&',']']
-endif
+"let g:ycm_confirm_extra_conf = 1
+"let g:ycm_global_ycm_extra_conf = '~/.vim/extension/YouCompleteMe/cpp/.ycm_extra_conf'
+"let g:ycm_error_symbol = '✗'
+"let g:ycm_warning_symbol = '✗'
+"let g:ycm_seed_identifiers_with_syntax = 1
+"let g:ycm_complete_in_comments = 1
+"let g:ycm_complete_in_strings = 1
+"let g:ycm_server_python_interpreter = '/usr/bin/python'
+"let g:ycm_python_binary_path = 'python'
+"nnoremap <leader>u :YcmCompleter GoToDeclaration<cr>
+"nnoremap <leader>i :YcmCompleter GoToDefinition<cr>
+"nnoremap <leader>o :YcmCompleter GoToInclude<cr>
+"nnoremap <leader>ff :YcmCompleter FixIt<cr>
+"nmap <F5> :YcmDiags<cr>
+"
+"" Ctags
+"set tags+=/usr/include/tags
+"set tags+=~/.vim/systags
+"set tags+=~/.vim/x86_64-linux-gnu-systags
+"let g:ycm_collect_identifiers_from_tags_files = 1
+"let g:ycm_semantic_triggers =  {
+"            \   'c' : ['->', '.','re![_a-zA-z0-9]'],
+"            \   'objc' : ['->', '.', 're!\[[_a-zA-Z]+\w*\s', 're!^\s*[^\W\d]\w*\s',
+"            \             're!\[.*\]\s'],
+"            \   'ocaml' : ['.', '#'],
+"            \   'cpp,objcpp' : ['->', '.', '::','re![_a-zA-Z0-9]'],
+"            \   'perl' : ['->'],
+"            \   'php' : ['->', '::'],
+"            \   'cs,java,javascript,typescript,d,python,perl6,scala,vb,elixir,go' : ['.'],
+"            \   'ruby' : ['.', '::'],
+"            \   'lua' : ['.', ':'],
+"            \   'erlang' : [':'],
+"            \ }
+"let g:ycm_semantic_triggers.c = ['->', '.', ' ', '(', '[', '&',']']
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
@@ -144,6 +142,9 @@ inoremap <silent> <F2> <esc> :TagbarToggle<cr>
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
+
+" Mundo
+nnoremap <F3> :MundoToggle<CR>
 
 " Markdown
 nmap <silent> <F7> <Plug>MarkdownPreview
@@ -168,12 +169,36 @@ let g:NERDTreeIndicatorMapCustom = {
     \ "Unknown"   : "?"
     \ }
 
-" ack
+"""ack
 nnoremap <leader>F :Ack!<space>
 
-" echodoc.vim
+"""echodoc.vim
 let g:echodoc_enable_at_startup = 1
 
-" tabular
+"""tabular
 nnoremap <leader>l :Tab /\|<cr>
 nnoremap <leader>= :Tab /=<cr>
+
+"""delimitMate
+let delimitMate_expand_cr = 1
+
+"""neosnippets
+" Plugin key-mappings.
+" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+
+" SuperTab like snippets behavior.
+" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+"imap <expr><TAB>
+" \ pumvisible() ? "\<C-n>" :
+" \ neosnippet#expandable_or_jumpable() ?
+" \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+" For conceal markers.
+if has('conceal')
+  set conceallevel=2 concealcursor=niv
+endif
