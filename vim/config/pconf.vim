@@ -1,6 +1,7 @@
 """ vim-startify
 
 """airline
+let g:airline_theme='dark'
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
@@ -25,15 +26,20 @@ let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = '☰'
 let g:airline_symbols.maxlinenr = ''
 
-
-" airline-tabline
+" airline extensions
+let g:airline_extensions = ['branch', 'tabline', 'tagbar']
+let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#tagbar#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
+
 let g:airline#extensions#tabline#buffer_idx_mode = 1
 let g:airline#extensions#tabline#keymap_ignored_filetypes = ['tagbar', 'nerdtree']
 let g:airline#extensions#tabline#left_sep = ''
 let g:airline#extensions#tabline#left_alt_sep = ''
 let g:airline#extensions#tabline#right_sep = ''
 let g:airline#extensions#tabline#right_alt_sep = ''
+
+let g:airline#extensions#syntastic#enabled = 1
 
 nmap <leader>1 <Plug>AirlineSelectTab1
 nmap <leader>2 <Plug>AirlineSelectTab2
@@ -60,7 +66,6 @@ let g:airline#extensions#tabline#buffer_idx_format = {
         \ '9': '9 '
         \}
 
-
 " 编辑vimrc文件
 nnoremap <leader>e :edit $MYVIMRC<cr>
 
@@ -74,12 +79,6 @@ nnoremap <leader>s :source $MYVIMRC<cr>
 nnoremap <leader><leader>i :PlugInstall<cr>
 nnoremap <leader><leader>u :PlugUpdate<cr>
 nnoremap <leader><leader>c :PlugClean<cr>
-
-" 分屏窗口移动
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-h> <c-w>h
-nnoremap <c-l> <c-w>l
 
 " 打开文件自动定位到最后编辑的位置
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "normal! g'\"" | endif
@@ -96,40 +95,42 @@ let g:NERDTreeDirArrowExpandable='▷'
 let g:NERDTreeDirArrowCollapsible='▼'
 
 " YouCompleteMe
-let g:ycm_confirm_extra_conf = 0
-let g:ycm_error_symbol = '✗'
-let g:ycm_warning_symbol = '✗'
-let g:ycm_seed_identifiers_with_syntax = 1
-let g:ycm_complete_in_comments = 1
-let g:ycm_complete_in_strings = 1
-let g:ycm_server_python_interpreter = '/usr/bin/python'
-let g:ycm_python_binary_path = 'python'
-nnoremap <leader>u :YcmCompleter GoToDeclaration<cr>
-" 已经使用cpp-mode插件提供的转到函数实现的功能
-" nnoremap <leader>i :YcmCompleter GoToDefinition<cr>
-nnoremap <leader>o :YcmCompleter GoToInclude<cr>
-nnoremap <leader>ff :YcmCompleter FixIt<cr>
-nmap <F5> :YcmDiags<cr>
+if has('c') || has('cpp')
+    let g:ycm_confirm_extra_conf = 1
+    let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+    let g:ycm_error_symbol = '✗'
+    let g:ycm_warning_symbol = '✗'
+    let g:ycm_seed_identifiers_with_syntax = 1
+    let g:ycm_complete_in_comments = 1
+    let g:ycm_complete_in_strings = 1
+    let g:ycm_server_python_interpreter = '/usr/bin/python'
+    let g:ycm_python_binary_path = 'python'
+    nnoremap <leader>u :YcmCompleter GoToDeclaration<cr>
+    nnoremap <leader>i :YcmCompleter GoToDefinition<cr>
+    nnoremap <leader>o :YcmCompleter GoToInclude<cr>
+    nnoremap <leader>ff :YcmCompleter FixIt<cr>
+    nmap <F5> :YcmDiags<cr>
 
-" Ctags
-set tags+=/usr/include/tags
-set tags+=~/.vim/systags
-set tags+=~/.vim/x86_64-linux-gnu-systags
-let g:ycm_collect_identifiers_from_tags_files = 1
-let g:ycm_semantic_triggers =  {
-  \   'c' : ['->', '.','re![_a-zA-z0-9]'],
-  \   'objc' : ['->', '.', 're!\[[_a-zA-Z]+\w*\s', 're!^\s*[^\W\d]\w*\s',
-  \             're!\[.*\]\s'],
-  \   'ocaml' : ['.', '#'],
-  \   'cpp,objcpp' : ['->', '.', '::','re![_a-zA-Z0-9]'],
-  \   'perl' : ['->'],
-  \   'php' : ['->', '::'],
-  \   'cs,java,javascript,typescript,d,python,perl6,scala,vb,elixir,go' : ['.'],
-  \   'ruby' : ['.', '::'],
-  \   'lua' : ['.', ':'],
-  \   'erlang' : [':'],
-  \ }
-let g:ycm_semantic_triggers.c = ['->', '.', ' ', '(', '[', '&',']']
+    " Ctags
+    set tags+=/usr/include/tags
+    set tags+=~/.vim/systags
+    set tags+=~/.vim/x86_64-linux-gnu-systags
+    let g:ycm_collect_identifiers_from_tags_files = 1
+    let g:ycm_semantic_triggers =  {
+                \   'c' : ['->', '.','re![_a-zA-z0-9]'],
+                \   'objc' : ['->', '.', 're!\[[_a-zA-Z]+\w*\s', 're!^\s*[^\W\d]\w*\s',
+                \             're!\[.*\]\s'],
+                \   'ocaml' : ['.', '#'],
+                \   'cpp,objcpp' : ['->', '.', '::','re![_a-zA-Z0-9]'],
+                \   'perl' : ['->'],
+                \   'php' : ['->', '::'],
+                \   'cs,java,javascript,typescript,d,python,perl6,scala,vb,elixir,go' : ['.'],
+                \   'ruby' : ['.', '::'],
+                \   'lua' : ['.', ':'],
+                \   'erlang' : [':'],
+                \ }
+    let g:ycm_semantic_triggers.c = ['->', '.', ' ', '(', '[', '&',']']
+endif
 
 " deoplete
 let g:deoplete#enable_at_startup = 1

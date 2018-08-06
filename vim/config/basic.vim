@@ -67,8 +67,8 @@ set confirm             " 在处理未保存或只读文件的时候，弹出确
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 编码设置
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set langmenu=zh_CN.UTF-8
-set helplang=cn
+set langmenu=en_US.UTF-8
+set helplang=en
 set termencoding=utf-8
 set encoding=utf8
 set fileencodings=utf8,ucs-bom,gbk,cp936,gb2312,gb18030
@@ -76,10 +76,12 @@ set fileencodings=utf8,ucs-bom,gbk,cp936,gb2312,gb18030
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 其它设置
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Shift+K 根据光标处单词查找 man 手册
 source $VIMRUNTIME/ftplugin/man.vim
 cmap man Man
 nmap K :Man <cword><CR>
 
+" 设置不同文件类型的缩进空格
 autocmd BufNewFile,BufRead *.html,*.htm,*.css,*.js set noexpandtab tabstop=2 shiftwidth=2
 autocmd BufNewFile,BufRead *.java set noexpandtab tabstop=4 shiftwidth=4
 autocmd BufNewFile,BufRead *.c set noexpandtab tabstop=8 shiftwidth=8
