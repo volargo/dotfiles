@@ -18,7 +18,6 @@ set whichwrap+=<,>,h,l   " 设置光标键跨行
 set ttimeoutlen=0        " 设置<ESC>键响应时间
 set virtualedit=block,onemore   " 允许光标出现在最后一个字符的后面
 
-"""主题
 set background=dark
 let g:gruvbox_termcolors=256
 colorscheme molokayo
@@ -86,3 +85,6 @@ nmap K :Man <cword><CR>
 autocmd BufNewFile,BufRead *.html,*.htm,*.css,*.js set noexpandtab tabstop=2 shiftwidth=2
 autocmd BufNewFile,BufRead *.java set noexpandtab tabstop=4 shiftwidth=4
 autocmd BufNewFile,BufRead *.c set noexpandtab tabstop=8 shiftwidth=8
+
+" 打开文件自动定位到最后编辑的位置
+autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "normal! g'\"" | endif
