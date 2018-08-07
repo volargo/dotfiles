@@ -34,10 +34,5 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 
 # apply dotfiles' vimrc
 mkdir -p ~/.vim && cp ./vimrc ~/.vim
-cp -r ./config ~/.vim
-ln -s ~/.vim/vimrc ~/.vimrc
-
-git clone https://github.com/flazz/vim-colorschemes.git .cache/vim-colorscheme
-git clone https://github.com/fmoralesc/molokayo.git .cache/molokayo
-mv .cache/molokayo/colors/molokayo.vim .cache/vim-colorscheme/colors
-mv .cache/vim-colorscheme/colors ~/.vim
+cp -r ./config ~/.vim && ln -s ~/.vim/vimrc ~/.vimrc
+mkdir -p ~/.vim/extension && cp -r ./colors ~/.vim
