@@ -20,6 +20,7 @@
 declare -A URLS
 
 URLS=(
+  ["baidu"]="https://www.baidu.com/s?wd="
   ["google"]="https://www.google.com/search?q="
   ["bing"]="https://www.bing.com/search?q="
   ["yahoo"]="https://search.yahoo.com/search?p="
