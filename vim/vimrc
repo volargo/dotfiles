@@ -1,5 +1,5 @@
 if 1
-    execute 'source' fnamemodify(expand('<sfile>'), ':h').'/.vim/config/init.vim'
+    execute 'source' fnamemodify(expand('<sfile>'), ':h').'/.vim/config/basic.vim'
     execute 'source' fnamemodify(expand('<sfile>'), ':h').'/.vim/config/plist.vim'
     execute 'source' fnamemodify(expand('<sfile>'), ':h').'/.vim/config/pconf.vim'
 endif
