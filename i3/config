@@ -25,6 +25,8 @@ bindsym $mod+q kill
 bindsym $mod+d exec rofi -show run
 # menu applications
 bindsym $mod+m exec rofi -show drun
+# ssh
+bindsym $mod+c exec rofi -show ssh
 # j4-dmenu-desktop
 bindsym $mod+i exec j4-dmenu-desktop
 # switch workspace
