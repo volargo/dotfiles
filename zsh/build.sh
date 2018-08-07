@@ -27,3 +27,8 @@ else
     sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
     sed -i "s/robbyrussell/pygmalion/g" ~/.zshrc
 fi
+
+cat ./append.txt >> ~/.zshrc
+
+# add java PATH
+# export PATH=/opt/jdk-10.0.2/bin:$PATH
