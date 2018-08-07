@@ -6,13 +6,19 @@
 #
 
 # font
-font pango: Arimo Nerd Font Regular 9
+font pango: RobotoMono Nerd Font Regular 9
 
 # leading key
 set $mod Mod4
 
 # background
-exec exec feh --bg-scale ~/.config/i3/wallperpapers/Debian.jpg
+exec exec feh --bg-scale ~/.config/i3/wallpapers/Debian.jpg
+
+###i3-gaps-next
+gaps inner $gaps_inner
+gaps outer $gaps_outer
+set $gaps_inner 4
+set $gaps_outer 4
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -208,14 +214,7 @@ exec --no-startup-id xset dpms 60
 ###Applications autorun when system start
 exec --no-startup-id xfce4-power-manager &
 
-###i3-gaps-next
-gaps inner $gaps_inner
-gaps outer $gaps_outer
-set $gaps_inner 2
-set $gaps_outer 2
-
 ### Applications bar
-
 client.focused #d70a53 #d70a53 #ffffff #8c0333
 client.focused_inactive #333333 #333333 #888888 #333333
 client.unfocused #333333 #333333 #888888 #333333

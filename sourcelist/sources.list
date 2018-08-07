@@ -1,0 +1,28 @@
+# 
+
+# deb cdrom:[Debian GNU/Linux 2018.2 _Kali-rolling_ - Official Snapshot amd64 LIVE/INSTALL Binary 20180412-12:08]/ kali-last-snapshot contrib main non-free
+
+#deb cdrom:[Debian GNU/Linux 2018.2 _Kali-rolling_ - Official Snapshot amd64 LIVE/INSTALL Binary 20180412-12:08]/ kali-last-snapshot contrib main non-free
+
+# This system was installed using small removable media
+# (e.g. netinst, live or single CD). The matching "deb cdrom"
+# entries were disabled at the end of the installation process.
+# For information about how to configure apt package sources,
+# see the sources.list(5) manual.
+
+# Kali Linux 官方源
+#deb http://http.kali.org/kali kali-rolling main non-free contrib
+#deb-src http://http.kali.org/kali kali-rolling main non-free contrib
+
+# Kali Linux 中国科技大学源
+deb https://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib
+deb-src https://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib
+
+# Debian 中国科技大学源
+#deb http://mirrors.ustc.edu.cn/debian stable main contrib non-free
+# deb-src http://mirrors.ustc.edu.cn/debian stable main contrib non-free
+#deb http://mirrors.ustc.edu.cn/debian stable-updates main contrib non-free
+# deb-src http://mirrors.ustc.edu.cn/debian stable-updates main contrib non-free
+
+# deb http://mirrors.ustc.edu.cn/debian stable-proposed-updates main contrib non-free
+# deb-src http://mirrors.ustc.edu.cn/debian stable-proposed-updates main contrib non-free
