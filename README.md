@@ -85,15 +85,3 @@ bindsym $mod+g exec bash ~/.config/rofi/scripts/web-search.sh
 # quick screenshot
 bindsym $mod+Print exec deepin-screenshot
 ```
-
-## Install (building...)
-1. Clone this repo somewhere and run `install.sh` scripts with `root`.
-```Shell
-$ git clone git@github.com:volargo/dotfiles.git ~/dotfiles
-$ cd ~/dotfiles
-$ chmod +x install.sh
-$ ./install.sh
-```
-
-## Support
-More details view my blog [www.volargo.com](https://www.volargo.com)
